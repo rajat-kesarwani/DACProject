@@ -11,22 +11,22 @@ import {Router} from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminService implements CanActivate {
+export class AdminService  {
   url = 'http://localhost:8080/admin';
   //create an httpclient object
   constructor(private httpclient: HttpClient, private Router: Router) {}
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    //user is already logedin
-    //if token is present user is logedin
-    //launch the component
-    if (sessionStorage['token']) {
-      return true;
-    } else {
-      //stop launching
-      this.Router.navigate(['/admin-signin']);
-      return false;
-    }
-  }
+  // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+  //   //user is already logedin
+  //   //if token is present user is logedin
+  //   //launch the component
+  //   if (sessionStorage['token']) {
+  //     return true;
+  //   } else {
+  //     //stop launching
+  //     this.Router.navigate(['/admin-signin']);
+  //     return false;
+  //   }
+  // }
 
   login(email: string, password: string) {
     const body = {
