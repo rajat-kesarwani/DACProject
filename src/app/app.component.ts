@@ -13,6 +13,11 @@ export class AppComponent {
 
   ngOnInit(): void {
   }
+  logout() {
+    // sessionStorage.removeItem['token'];
+    sessionStorage.removeItem['name'];
+    this.router.navigate(['/home']);
+  }
 
 
 

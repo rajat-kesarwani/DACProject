@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 
 import { MembershipModule } from './membership/membership.module';
 import { HomeCatalogModule } from './home-catalog/home-catalog.module';
@@ -14,6 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HomeCatalogModule,
     MembershipModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
+
+
 
 
   ],
